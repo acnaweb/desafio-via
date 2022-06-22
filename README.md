@@ -35,6 +35,11 @@ _A logical, reasonably standardized, but flexible project structure for doing an
 * Code quality
 - make lint
 
+### Continuous Integration
+
+- on push branch main
+
+
 ### Run (local)
 
 * Build Docker Image
