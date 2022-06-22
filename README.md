@@ -3,36 +3,53 @@ ML Framework
 
 _A logical, reasonably standardized, but flexible project structure for doing and sharing data science work._
 
-Pre req
 
-git
-conda
-docker
+#### Setup
 
+* Pre requisitos
+- Git
+- Conda
+- Docker
+- Python 3.8
 
+* Conda: create environment
+- conda create --name desafiovia python=3.8
+- conda activate desafiovia
 
-create environment
-- conda create --name poc python=3.8
+* Install
+- make install
 
-make setup
+### Data Science
 
-make run_data
-make run_train
+* Data Ingestion and Data Processing
+- make run_data
 
+* Training and Validation
+- make run_train
 
-make test
-make lint
+### Quality
 
-make build
-make run_api
-make stop_api
+* Unit test
+- make test
 
+* Code quality
+- make lint
 
-API
+### Run (local)
 
-base: http://localhost
-docs: http://localhost/docs
-predict: http://localhost/invocations
+* Build Docker Image
+- make build
+
+* Run Container
+- make run_api
+
+* API
+
+- base: http://localhost
+- docs (Swagger): http://localhost/docs
+- predict (endpoint): http://localhost/invocations
+
+* Predict 
 
 curl -X 'POST' \
   'http://localhost/invocations' \
@@ -45,7 +62,7 @@ curl -X 'POST' \
   "petal_width_in_cm": 3
 }'
 
-Response
+Response:
 
 {
   "prediction": "Iris-setosa",
@@ -65,6 +82,8 @@ Response
   }
 }
 
+* Stop run 
+- make stop_api
 
 
 

@@ -8,7 +8,7 @@ clean:
 	pip uninstall -y -r requirements.txt
 	scripts/clean.sh
 
-setup: clean 
+install: clean 
 	pip install -r requirements.txt	
 	scripts/create_folder.sh	
 
