@@ -78,6 +78,7 @@ Run Container
 | Predict (endpoint) | http://localhost/invocations |
 
 - Exemplo de request
+
 `
 curl -X 'POST' \
   'http://localhost/invocations' \
