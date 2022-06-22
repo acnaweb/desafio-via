@@ -11,7 +11,8 @@
 | Predict (endpoint) | http://3.144.218.69/invocations |
 
 - Exemplo de request
-`
+
+```
 curl -X 'POST' \
   'http://3.144.218.69/invocations' \
   -H 'accept: application/json' \
@@ -22,7 +23,7 @@ curl -X 'POST' \
   "petal_length_in_cm": 0,
   "petal_width_in_cm": 0
 }'
-`    
+```    
 ---
 
 ## Dev Setup 
@@ -79,7 +80,7 @@ Run Container
 
 - Exemplo de request
 
-`
+```
 curl -X 'POST' \
   'http://localhost/invocations' \
   -H 'accept: application/json' \
@@ -90,7 +91,7 @@ curl -X 'POST' \
   "petal_length_in_cm": 1.0,
   "petal_width_in_cm": 3
 }'
-`    
+```    
 
 Stop run 
 
