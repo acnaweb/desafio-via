@@ -25,13 +25,20 @@ run_train:
 	python src/app/models/train_model.py  
 
 build:
-	docker build -t via/model:1.0 .
+	docker build -t acnaweb/desafiovia:1.0 .
 
 run_api:
-	docker run -d --name model -p 80:80 -t via/model:1.0 
+	docker run -d --name model -p 80:80 -t acnaweb/desafiovia:1.0 
 
 stop_api:
 	docker rm model --force
+
+tag_ecr:
+	docker tag acnaweb/desafiovia:1.0 336119796486.dkr.ecr.us-east-2.amazonaws.com/api-desafiovia:latest
+
+push:
+	docker push 336119796486.dkr.ecr.us-east-2.amazonaws.com/api-desafiovia:latest
+	
 
 run_all: run_data run_train lint test build
 

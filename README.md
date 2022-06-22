@@ -39,6 +39,22 @@ _A logical, reasonably standardized, but flexible project structure for doing an
 
 - on push branch main
 
+### Cloud AWS
+
+- url base: http://3.144.218.69/
+- docs (Swagger): http://3.144.218.69/docs 
+- predict (endpoint): http://3.144.218.69/invocations
+
+curl -X 'POST' \
+  'http://3.144.218.69/invocations' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "sepal_length_in_cm": 0,
+  "sepal_width_in_cm": 0,
+  "petal_length_in_cm": 0,
+  "petal_width_in_cm": 0
+}'
 
 ### Run (local)
 
@@ -50,11 +66,9 @@ _A logical, reasonably standardized, but flexible project structure for doing an
 
 * API
 
-- base: http://localhost
+- url base: http://localhost
 - docs (Swagger): http://localhost/docs
 - predict (endpoint): http://localhost/invocations
-
-* Predict 
 
 curl -X 'POST' \
   'http://localhost/invocations' \
@@ -66,26 +80,6 @@ curl -X 'POST' \
   "petal_length_in_cm": 1.0,
   "petal_width_in_cm": 3
 }'
-
-Response:
-
-{
-  "prediction": "Iris-setosa",
-  "probability": {
-    "category": [
-      "Iris-setosa",
-      "Iris-versicolor",
-      "Iris-virginica"
-    ],
-    "probability": [
-      [
-        0.7328223307494116,
-        0.256631168648554,
-        0.010546500602034438
-      ]
-    ]
-  }
-}
 
 * Stop run 
 - make stop_api
