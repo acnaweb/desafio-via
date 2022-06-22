@@ -1,0 +1,10 @@
+cloudpickle==2.1.0
+numpy==1.22.4
+pandas==1.4.2
+protobuf==3.20.1
+scikit-learn==1.1.0
+boto3==1.24.12
+python-dotenv==0.20.0
+fastapi==0.78.0
+pydantic==1.9.1
+uvicorn==0.17.6
