@@ -1,31 +1,55 @@
-# ml-framework
-ML Framework
+# Desafio Via
+    Esse desafio consiste em treinar um modelo de machine learning que classifique as flores em suas respectivas espécies (Iris Dataset) e disponibilizar o modelo treinado em formato de API.
+---
+## Cloud AWS
+| Default aligned | Left aligned | Center aligned  | Right aligned  |
+|-----------------|:-------------|:---------------:|---------------:|
 
-_A logical, reasonably standardized, but flexible project structure for doing and sharing data science work._
+| Item | URL |
+|------|-----|
+| Url base | http://3.144.218.69 |
+| Docs/Test (Swagger) | http://3.144.218.69/docs |
+| Predict (endpoint) | http://3.144.218.69/invocations |
 
+```
+curl -X 'POST' \
+  'http://3.144.218.69/invocations' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "sepal_length_in_cm": 0,
+  "sepal_width_in_cm": 0,
+  "petal_length_in_cm": 0,
+  "petal_width_in_cm": 0
+}'
+```    
+    
+---
+## Setup
 
-#### Setup
+#### Pre requisitos
+    - Git
+    - Conda
+    - Docker
+    - Python 3.8
 
-* Pre requisitos
-- Git
-- Conda
-- Docker
-- Python 3.8
+#### Conda: create environment
+    - conda create --name desafiovia python=3.8
+    - conda activate desafiovia
 
-* Conda: create environment
-- conda create --name desafiovia python=3.8
-- conda activate desafiovia
+#### Install
+    - make install
+---
+## Data Science
 
-* Install
-- make install
+#### Data Ingestion and Data Processing
+    - make run_data
 
-### Data Science
-
-* Data Ingestion and Data Processing
-- make run_data
-
-* Training and Validation
-- make run_train
+#### Training and Validation
+    - make run_train
+    
+    
+    
 
 ### Quality
 
@@ -39,22 +63,7 @@ _A logical, reasonably standardized, but flexible project structure for doing an
 
 - on push branch main
 
-### Cloud AWS
 
-- url base: http://3.144.218.69/
-- docs (Swagger): http://3.144.218.69/docs 
-- predict (endpoint): http://3.144.218.69/invocations
-
-curl -X 'POST' \
-  'http://3.144.218.69/invocations' \
-  -H 'accept: application/json' \
-  -H 'Content-Type: application/json' \
-  -d '{
-  "sepal_length_in_cm": 0,
-  "sepal_width_in_cm": 0,
-  "petal_length_in_cm": 0,
-  "petal_width_in_cm": 0
-}'
 
 ### Run (local)
 
@@ -69,7 +78,8 @@ curl -X 'POST' \
 - url base: http://localhost
 - docs (Swagger): http://localhost/docs
 - predict (endpoint): http://localhost/invocations
-
+- 
+```
 curl -X 'POST' \
   'http://localhost/invocations' \
   -H 'accept: application/json' \
@@ -80,7 +90,7 @@ curl -X 'POST' \
   "petal_length_in_cm": 1.0,
   "petal_width_in_cm": 3
 }'
-
+```
 * Stop run 
 - make stop_api
 
