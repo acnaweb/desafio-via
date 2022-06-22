@@ -42,38 +42,43 @@ curl -X 'POST' \
 ---
 ## Data Science
 #### Data Ingestion and Data Processing
+
     - make run_data
 *Verificar na pasta **/data** os datasets gerados*
     
 #### Training and Validation
 
     - make run_train
-*Verificar na pasta **/model** os artefatos de modelo e pipeline transformação*
-
+*Verificar na pasta* **/model** *os artefatos de modelo e pipeline transformação*
+    
 #### Quality 
 
-- Unit test (run in project folder)
+Unit test (run in project folder)
+    
     - make test
 
-- Code quality (run in project folder)
-    - make lint
+Code quality (run in project folder)
 
+    - make lint
 
 ### Run (local)
 
-* Build Docker Image
-- make build
+Build Docker Image
 
-* Run Container
-- make run_api
+    - make build
 
-* API
+Run Container
 
-- url base: http://localhost
-- docs (Swagger): http://localhost/docs
-- predict (endpoint): http://localhost/invocations
-- 
-```
+    - make run_api
+    
+| Item | URL |
+|------|-----|
+| Url base | http://localhost |
+| Docs/Test (Swagger) | http://localhost/docs |
+| Predict (endpoint) | http://localhost/invocations |
+
+- Exemplo de request
+`
 curl -X 'POST' \
   'http://localhost/invocations' \
   -H 'accept: application/json' \
@@ -84,68 +89,37 @@ curl -X 'POST' \
   "petal_length_in_cm": 1.0,
   "petal_width_in_cm": 3
 }'
-```
-* Stop run 
-- make stop_api
+`    
+
+Stop run 
+
+    - make stop_api
 
 
 ### Continuous Integration
-- on push branch main
 
-
-
-
-
-
-
-#### [Project homepage](http://drivendata.github.io/cookiecutter-data-science/)
-
-
-### Requirements to use the cookiecutter template:
------------
- - Python 3.8+
- - [Cookiecutter Python package](http://cookiecutter.readthedocs.org/en/latest/installation.html) >= 1.4.0: This can be installed with pip by or conda depending on how you manage your Python packages:
-
-``` bash
-$ pip install cookiecutter
-```
-
-or
-
-``` bash
-$ conda config --add channels conda-forge
-$ conda install cookiecutter
-```
-
-desafio-via
-==============================
-
-Desafio Via
+Evento: on push branch main
+    
+    - make install
+    - make lint
+    - make test
 
 Project Organization
 ------------
 
-    ├── LICENSE
     ├── Makefile           <- Makefile with commands like `make data` or `make train`
     ├── README.md          <- The top-level README for developers using this project.
     ├── data
-    │   ├── external       <- Data from third party sources.
     │   ├── interim        <- Intermediate data that has been transformed.
     │   ├── processed      <- The final, canonical data sets for modeling.
     │   └── raw            <- The original, immutable data dump.
     │
-    ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
-    │
-    ├── models             <- Trained and serialized models, model predictions, or model summaries
+    ├── model             <- Trained and serialized models, model predictions, or model summaries
     │
     ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
     │                         the creator's initials, and a short `-` delimited description, e.g.
     │                         `1.0-jqp-initial-data-exploration`.
     │
-    ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
-    │
-    ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-    │   └── figures        <- Generated graphics and figures to be used in reporting
     │
     ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
     │                         generated with `pip freeze > requirements.txt`
