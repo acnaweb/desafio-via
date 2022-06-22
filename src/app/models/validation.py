@@ -1,6 +1,7 @@
 class ValidationError(Exception):
     pass
 
+
 # define metrics to be validate
 def get_expected_metrics():
     return {

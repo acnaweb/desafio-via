@@ -45,10 +45,10 @@ class DataPreprocessing:
         # save datasets
         self.save(X_train, X_test, y_train, y_test)
 
-    def get_feature_and_target(self, dataset: pd.DataFrame): 
+    def get_feature_and_target(self, dataset: pd.DataFrame):
         """get_feature_and_target"""
 
-        X: pd.DataFrame  = dataset[COLUMN_FEATURES]
+        X: pd.DataFrame = dataset[COLUMN_FEATURES]
         y: pd.DataFrame = dataset[COLUMN_TARGET]
 
         return (X, y)

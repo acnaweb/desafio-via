@@ -30,5 +30,8 @@ build:
 run_api:
 	docker run -d --name model -p 80:80 -t via/model:1.0 
 
+stop_api:
+	docker rm model --force
+
 run_all: run_data run_train lint test build
 

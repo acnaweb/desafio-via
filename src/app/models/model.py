@@ -1,5 +1,4 @@
 import logging
-import pandas as pd
 from sklearn.linear_model import LogisticRegression
 from data_serialize import load_artifact
 from sklearn.metrics import (

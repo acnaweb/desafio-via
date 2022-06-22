@@ -25,6 +25,7 @@ make lint
 
 make build
 make run_api
+make stop_api
 
 
 API
