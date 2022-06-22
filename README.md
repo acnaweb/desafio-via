@@ -2,16 +2,16 @@
     Esse desafio consiste em treinar um modelo de machine learning que classifique as flores em suas respectivas espécies (Iris Dataset) e disponibilizar o modelo treinado em formato de API.
 ---
 ## Cloud AWS
-| Default aligned | Left aligned | Center aligned  | Right aligned  |
-|-----------------|:-------------|:---------------:|---------------:|
 
+#### Dados de acesso
 | Item | URL |
 |------|-----|
 | Url base | http://3.144.218.69 |
 | Docs/Test (Swagger) | http://3.144.218.69/docs |
 | Predict (endpoint) | http://3.144.218.69/invocations |
 
-```
+- Exemplo de request
+`
 curl -X 'POST' \
   'http://3.144.218.69/invocations' \
   -H 'accept: application/json' \
@@ -22,47 +22,41 @@ curl -X 'POST' \
   "petal_length_in_cm": 0,
   "petal_width_in_cm": 0
 }'
-```    
-    
+`    
 ---
-## Setup
 
-#### Pre requisitos
+## Dev Setup 
+
+#### Pre req
     - Git
     - Conda
     - Docker
     - Python 3.8
 
-#### Conda: create environment
+#### Conda environment
     - conda create --name desafiovia python=3.8
     - conda activate desafiovia
 
-#### Install
+#### Install (run in project folder)
     - make install
 ---
 ## Data Science
-
 #### Data Ingestion and Data Processing
     - make run_data
-
+*Verificar na pasta **/data** os datasets gerados*
+    
 #### Training and Validation
+
     - make run_train
-    
-    
-    
+*Verificar na pasta **/model** os artefatos de modelo e pipeline transformação*
 
-### Quality
+#### Quality 
 
-* Unit test
-- make test
+- Unit test (run in project folder)
+    - make test
 
-* Code quality
-- make lint
-
-### Continuous Integration
-
-- on push branch main
-
+- Code quality (run in project folder)
+    - make lint
 
 
 ### Run (local)
@@ -95,6 +89,8 @@ curl -X 'POST' \
 - make stop_api
 
 
+### Continuous Integration
+- on push branch main
 
 
 
