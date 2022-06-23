@@ -41,7 +41,7 @@ curl -X 'POST' \
 #### Install (run in project folder)
     - make install
 ---
-## Data Science
+## Data Science (Executar todos os passos na sequencia)
 #### Data Ingestion and Data Processing
 
     - make run_data
