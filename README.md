@@ -6,8 +6,8 @@
 #### Dados de acesso
 | Item | URL | URL (DNS) |
 |------|-----|-----|
-| Url base | http://3.144.218.69 | http://ec2-3-144-218-69.us-east-2.compute.amazonaws.com/docs |
-| Docs/Test (Swagger) | http://3.144.218.69/docs |  [ec2-3-144-218-69.us-east-2.compute.amazonaws.com](http://ec2-3-144-218-69.us-east-2.compute.amazonaws.com/docs) |
+| Url base | http://3.144.218.69 | http://ec2-3-144-218-69.us-east-2.compute.amazonaws.com |
+| Docs/Test (Swagger) | http://3.144.218.69/docs | http://ec2-3-144-218-69.us-east-2.compute.amazonaws.com/docs   |
 | Predict (endpoint) | http://3.144.218.69/invocations | http://ec2-3-144-218-69.us-east-2.compute.amazonaws.com/invocations |
 
 - Exemplo de request
