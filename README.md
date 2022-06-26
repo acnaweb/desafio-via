@@ -14,7 +14,7 @@
 
 ```
 curl -X 'POST' \
-  'http://3.144.218.69/invocations' \
+  'http://ec2-3-144-218-69.us-east-2.compute.amazonaws.com/invocations' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{
